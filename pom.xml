@@ -14,8 +14,7 @@
     <artifactId>bancx-techtest</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
-
-    <name>BancX techtest parent module</name>
+    <name>CreditAppBX</name>
 
     <properties>
         <java.version>21</java.version>
