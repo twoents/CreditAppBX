@@ -41,8 +41,7 @@ The following shows the loans in the database, two loans are automatically creat
 > `[{"loanId":1,"loanAmount":10000.00,"term":12,"status":"ACTIVE"},{"loanId":2,"loanAmount":5000.00,"term":6,"status":"ACTIVE"}]`
 
 The following command creates a third loan with an amount outstanding of 4000. this creates a loan with an id of 3 as the output shows.
-> `C:\workspace>curl -X POST -H "Content-Type: application/json" -d "{\"loanAmount\": 4000.00, \"term\": 12, \"status\": \"ACTIVE\" }" http://loca
-lhost:8090/CreditProvider/loans`
+> `C:\workspace>curl -X POST -H "Content-Type: application/json" -d "{\"loanAmount\": 4000.00, \"term\": 12, \"status\": \"ACTIVE\" }" http://localhost:8090/CreditProvider/loans`
 >   
 > `{"loanId":3,"loanAmount":4000.00,"term":12,"status":"ACTIVE"}`  
 
