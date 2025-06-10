@@ -63,4 +63,16 @@ tProvider/payments`
 >
 > `{"loanId":3,"amountRemaining":0.00,"loanStatus":"SETTLED"}`
 
+Should ideally have been done using something more aking to the following in just pure SQL.  
+> `insert into payments`  
+> `( loan_id, payment_amount )`  
+> `select 1, 500.00`  
+> `where exists (`  
+> `   select 1`
+> `   from loans left join payments on ( loans.loan_id = payments.loan_id )`  
+> `   where ( loans.loan_id = 1 )`  
+> `  group by loans.loan_id, loans.loan_amount`  
+> `   having loans.loan_amount >= coalesce( sum(payment_amount), 0 ) + 500`  
+> `);`  
+
 Pressing Ctrl-C in Command prompt 1, 2 & 3 will shutdown the application.
